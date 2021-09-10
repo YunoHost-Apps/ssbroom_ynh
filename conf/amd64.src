@@ -1,0 +1,7 @@
+SOURCE_URL=https://github.com/ssb-ngi-pointer/go-ssb-room/releases/download/v2.0.6/go-ssb-room_2.0.6_Linux_x86_64.tar.gz
+SOURCE_SUM=0ab385e7632ad8c3c16c13f6bb1843dcfaa9e927afd9d6a8a35691b14a308e5e
+SOURCE_SUM_PRG=sha256sum
+SOURCE_FORMAT=tar.gz
+SOURCE_IN_SUBDIR=true
+SOURCE_FILENAME=
+SOURCE_EXTRACT=true
