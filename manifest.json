@@ -35,29 +35,19 @@
                 "example": "example.com"
             },
             {
-                "name": "path",
-                "type": "path",
-                "example": "/example",
-                "default": "/example"
-            },
-            {
-                "name": "admin",
-                "type": "user",
-                "example": "johndoe"
-            },
-            {
-                "name": "is_public",
-                "type": "boolean",
-                "default": true
+                "name": "ssb_admin_id",
+                "type": "string",
+                "help": {
+                    "en": "This ssb_id is used as the username for the first admin of the room. Create an ssb account or use your already existing ssb account, and use your ssb public key as the room admin id."
+                },
+                "example": "@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
             },
             {
                 "name": "password",
                 "type": "password",
                 "help": {
-                    "en": "Use the help field to add an information for the admin about this question.",
-                    "fr": "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
-                },
-                "example": "Choose a password"
+                    "en": "Use this password to log into the admin interface for the ssb room."
+                }
             }
         ]
     }

@@ -11,6 +11,20 @@ pkg_dependencies=""
 # PERSONAL HELPERS
 #=================================================
 
+# because ssbroom requires wildcard subdomains for aliases
+# we need this custom function for creating the ssbroom nginx config
+# instead of the standard ynh_add_nginx_config
+add_ssb_room_nginx_config() {
+    domain=$1
+    domainregex=$(echo "$domain" | sed -r 's/\./\\\./g')
+    # the sed statement above replaces all . with \.
+    ynh_add_config --template="full_nginx.conf" --destination="/etc/nginx/conf.d/$domain.conf"
+}
+
+remove_ssb_room_nginx_config() {
+    rm "/etc/nginx/conf.d/$domain.conf"
+}
+
 #=================================================
 # EXPERIMENTAL HELPERS
 #=================================================
