@@ -94,6 +94,7 @@ ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$final_path" --source_id="$architecture"
 
+# permissions
 chmod 750 "$final_path"
 chmod -R o-rwx "$final_path"
 chown -R $app:www-data "$final_path"
@@ -126,7 +127,17 @@ chown -R $app:www-data "$datadir"
 # CREATE FIRST ADMIN USER
 #=================================================
 ynh_script_progression --message="Creating first ssbroom admin user"  --weight=1
-ynh_exec_as $app $final_path/insert-user -repo $datadir $ssb_admin_id
+ynh_exec_as $app /usr/bin/expect<<EOF
+set force_conservative 0  ;
+set timeout -1
+spawn sh -c "$final_path/insert-user -repo $datadir $ssb_admin_id"
+match_max 100000
+expect "*?assword: "
+send -- "$password\r"
+expect "*?assword: "
+send -- "$password\r"
+expect eof
+EOF
 
 #=================================================
 # SETUP SYSTEMD
@@ -151,7 +162,7 @@ ynh_use_logrotate
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --time --weight=1
 
-yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log" --needs_exposed_ports $ssbport
+yunohost service add $app --description="Secure Scuttlebutt room server implemented in Go" --log="/var/log/$app/$app.log" --needs_exposed_ports $ssbport
 
 #=================================================
 # START SYSTEMD SERVICE
