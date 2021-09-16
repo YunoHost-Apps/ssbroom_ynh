@@ -15,7 +15,7 @@
         "userdoc": "https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md",
         "code": "https://github.com/ssb-ngi-pointer/go-ssb-room"
     },
-    "license": "free",
+    "license": "AGPL-3.0",
     "maintainer": {
         "name": "Max Fowler",
         "email": "max@mfowler.info"
