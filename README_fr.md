@@ -28,6 +28,7 @@ Some long and extensive description of what the app is and does, lorem ipsum dol
 
 ## Captures d'écran
 
+![](./doc/screenshots/ssbroom-screenshot.png)
 ![](./doc/screenshots/example.jpg)
 
 ## Avertissements / informations importantes

@@ -15,16 +15,15 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-This is an SSB room server built in Go, packaged for yunohost. A room server is used to make connecting with friends easier on SSB apps. 
-Room servers also makes it easy for any member to invite new folks, allowing the network to expand on its own. 
-
-A more extensive document explaining how ssb room servers technically work can be found here: https://ssb-ngi-pointer.github.io/rooms2/
+Some long and extensive description of what the app is and does, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Features
 
-- SSB users can connect to the room and then create tunneled connections between each other.
-- Admins of the SSB room can create invitations to invite new members.
-- It is also possible, through settings, to allow new members to also invite new members (community mode).
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco ;
+- Laboris nisi ut aliquip ex ea commodo consequat ;
+- Duis aute irure dolor in reprehenderit in voluptate ;
+- Velit esse cillum dolore eu fugiat nulla pariatur ;
+- Excepteur sint occaecat cupidatat non proident, sunt in culpa."
 
 
 **Shipped version:** 2.0.6~ynh1
@@ -34,16 +33,22 @@ A more extensive document explaining how ssb room servers technically work can b
 ## Screenshots
 
 ![](./doc/screenshots/ssbroom-screenshot.png)
+![](./doc/screenshots/example.jpg)
 
 ## Disclaimers / important information
 
-* Current limitations:
-    * requires a dedicated domain and can only run on the / path.
-    * requires HTTPS
-    * currently only supports amd64 architecture (hopefully getting more binaries from upstream soon)
-    * uses own authentication mechanism (not SSO LDAP)
-    * currently only supports one installation per server, and requires port 8008 specifically,
-        but hopefully getting flexibility for other ports from upstream soon
+* Any known limitations, constrains or stuff not working, such as (but not limited to):
+    * requiring a full dedicated domain ?
+    * architectures not supported ?
+    * not-working single-sign on or LDAP integration ?
+    * the app requires an important amount of RAM / disk / .. to install or to work properly
+    * etc...
+
+* Other infos that people should be aware of, such as:
+    * any specific step to perform after installing (such as manually finishing the install, specific admin credentials, ...)
+    * how to configure / administrate the application if it ain't obvious
+    * upgrade process / specificities / things to be aware of ?
+    * security considerations ?
 
 ## Documentation and resources
 
