@@ -104,9 +104,8 @@ chown -R $app:www-data "$final_path"
 #=================================================
 ynh_script_progression --message="Configuring NGINX web server..." --time --weight=1
 
-# because ssbroom requires wildcard subdomains for aliases
-# we need this custom function for creating the ssbroom nginx config
-add_ssb_room_nginx_config $domain
+# add nginx config
+ynh_add_nginx_config
 
 #=================================================
 # CREATE DATA DIRECTORY

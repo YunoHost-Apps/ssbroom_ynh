@@ -48,7 +48,7 @@ test ! -d $final_path \
 #=================================================
 ynh_script_progression --message="Restoring the NGINX configuration..." --time --weight=1
 
-ynh_restore_file --origin_path="/etc/nginx/conf.d/$domain.conf"
+ynh_restore_file --origin_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 
 #=================================================
 # RECREATE THE DEDICATED USER

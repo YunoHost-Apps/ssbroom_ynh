@@ -80,11 +80,8 @@ ynh_secure_remove --file="$datadir"
 #=================================================
 ynh_script_progression --message="Removing NGINX web server configuration..." --time --weight=1
 
-# because ssbroom requires wildcard subdomains for aliases
-# we need this custom function for creating/removing the ssbroom nginx config
-# instead of the standard ynh_add_nginx_config
 # Remove the dedicated NGINX config
-remove_ssb_room_nginx_config $domain
+ynh_remove_nginx_config
 
 #=================================================
 # CLOSE A PORT
