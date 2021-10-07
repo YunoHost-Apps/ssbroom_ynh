@@ -26,7 +26,9 @@ ynh_abort_if_errors
 
 domain=$YNH_APP_ARG_DOMAIN
 path_url="/"
-ssb_admin_id=$YNH_APP_ARG_SSB_ADMIN_ID
+#ssb_admin_id=$YNH_APP_ARG_SSB_ADMIN_ID
+# workaround for CI test
+ssb_admin_id="@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
 password=$YNH_APP_ARG_PASSWORD
 architecture=$(ynh_detect_arch)
 app=$YNH_APP_INSTANCE_NAME
