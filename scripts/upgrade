@@ -20,6 +20,7 @@ domain=$(ynh_app_setting_get --app=$app --key=domain)
 path_url=$(ynh_app_setting_get --app=$app --key=path)
 ssb_admin_id=$(ynh_app_setting_get --app=$app --key=ssb_admin_id)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
+port=$(ynh_app_setting_get --app=$app --key=port)
 ssbport=$(ynh_app_setting_get --app=$app --key=ssbport)
 architecture=$(ynh_detect_arch)
 
