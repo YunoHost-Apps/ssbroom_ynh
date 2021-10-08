@@ -43,6 +43,14 @@
                 "example": "@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
             },
             {
+                "name": "is_public",
+                "type": "boolean",
+                "default": true,
+                "help": {
+                    "en": "If false, ssbroom will only be usable by yunohost users."
+                }
+            },
+            {
                 "name": "password",
                 "type": "password",
                 "help": {

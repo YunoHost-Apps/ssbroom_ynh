@@ -26,6 +26,7 @@ ynh_abort_if_errors
 
 domain=$YNH_APP_ARG_DOMAIN
 path_url="/"
+is_public=$YNH_APP_ARG_IS_PUBLIC
 #ssb_admin_id=$YNH_APP_ARG_SSB_ADMIN_ID
 # workaround for CI test
 ssb_admin_id="@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
@@ -51,6 +52,7 @@ ynh_script_progression --message="Storing installation settings..." --time --wei
 
 ynh_app_setting_set --app=$app --key=domain --value=$domain
 ynh_app_setting_set --app=$app --key=path --value=$path_url
+ynh_app_setting_set --app=$app --key=is_public --value=$is_public
 ynh_app_setting_set --app=$app --key=admin --value=$ssb_admin_id
 
 #=================================================
