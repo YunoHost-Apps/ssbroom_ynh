@@ -20,6 +20,7 @@ domain=$(ynh_app_setting_get --app=$app --key=domain)
 path_url=$(ynh_app_setting_get --app=$app --key=path)
 ssb_admin_id=$(ynh_app_setting_get --app=$app --key=ssb_admin_id)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
+ssbport=$(ynh_app_setting_get --app=$app --key=ssbport)
 architecture=$(ynh_detect_arch)
 
 #=================================================
@@ -165,7 +166,7 @@ ynh_use_logrotate --non-append
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..."  --weight=1
 
-yunohost service add $app --description="$description" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="$description" --log="/var/log/$app/$app.log" --needs_exposed_ports $ssbport
 
 #=================================================
 # START SYSTEMD SERVICE
