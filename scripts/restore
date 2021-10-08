@@ -115,7 +115,7 @@ ynh_restore_file --origin_path="/etc/logrotate.d/$app"
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --time --weight=1
 
-yunohost service add $app --description="Secure Scuttlebutt room server implemented in Go" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="$description" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE

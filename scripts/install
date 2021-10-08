@@ -165,7 +165,7 @@ ynh_use_logrotate
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --time --weight=1
 
-yunohost service add $app --description="Secure Scuttlebutt room server implemented in Go" --log="/var/log/$app/$app.log" --needs_exposed_ports $ssbport
+yunohost service add $app --description="$description" --log="/var/log/$app/$app.log" --needs_exposed_ports $ssbport
 
 #=================================================
 # START SYSTEMD SERVICE
