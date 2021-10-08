@@ -178,14 +178,19 @@ ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$ap
 #=================================================
 ynh_script_progression --message="Configuring permissions..." --time --weight=1
 
-# Make app public
-# Everyone can access the app.
-# The "main" permission is automatically created before the install script.
-ynh_permission_update --permission="main" --add="visitors"
-
-# all users can access the /admin section, with or without SSO
+# for normal operation of the app, is_public should equal True,
+# and all visitors should be able to access the /admin section, with or without SSO
 # as go-ssb-room has its own authentication and user-system
 # which operates outside of yunohost SSO
+
+# Make app public if necessary
+if [ $is_public -eq 1 ]
+then
+	# Everyone can access the app.
+	# The "main" permission is automatically created before the install script.
+	ynh_permission_update --permission="main" --add="visitors"
+fi
+
 
 #=================================================
 # RELOAD NGINX
