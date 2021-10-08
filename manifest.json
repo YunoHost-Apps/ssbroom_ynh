@@ -38,7 +38,7 @@
                 "name": "ssb_admin_id",
                 "type": "string",
                 "ask": {
-                    "en": "SSB ID of first admin of the room",
+                    "en": "SSB ID of first admin of the room"
                 },
                 "help": {
                     "en": "This ssb_id is used as the username for the first admin of the room. Create an ssb account or use your already existing ssb account, and use your ssb public key as the room admin id."
