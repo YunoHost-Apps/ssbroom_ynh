@@ -5,7 +5,7 @@
     "description": {
         "en": "Secure Scuttlebutt room server implemented in Go"
     },
-    "version": "1.0~ynh1",
+    "version": "2.0.6~ynh1",
     "url": "https://github.com/ssb-ngi-pointer/go-ssb-room",
     "upstream": {
         "license": "free",
@@ -15,7 +15,7 @@
         "userdoc": "https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md",
         "code": "https://github.com/ssb-ngi-pointer/go-ssb-room"
     },
-    "license": "free",
+    "license": "AGPL-3.0",
     "maintainer": {
         "name": "Max Fowler",
         "email": "max@mfowler.info"
@@ -37,10 +37,21 @@
             {
                 "name": "ssb_admin_id",
                 "type": "string",
+                "ask": {
+                    "en": "SSB ID of first admin of the room"
+                },
                 "help": {
                     "en": "This ssb_id is used as the username for the first admin of the room. Create an ssb account or use your already existing ssb account, and use your ssb public key as the room admin id."
                 },
                 "example": "@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
+            },
+            {
+                "name": "is_public",
+                "type": "boolean",
+                "default": true,
+                "help": {
+                    "en": "If false, ssbroom will only be usable by yunohost users."
+                }
             },
             {
                 "name": "password",

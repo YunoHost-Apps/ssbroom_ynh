@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__DATADIR__/
-ExecStart=__FINALPATH__/go-ssb-room -repo __DATADIR__/ -lishttp localhost:__PORT__ -https-domain __DOMAIN__ -lismux localhost:__SSBPORT__
+ExecStart=__FINALPATH__/go-ssb-room -repo __DATADIR__/ -lishttp localhost:__PORT__ -https-domain __DOMAIN__ -lismux :__SSBPORT__ -aliases-as-subdomains false
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 

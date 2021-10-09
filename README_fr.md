@@ -11,40 +11,36 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-Some long and extensive description of what the app is and does, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+A Scuttlebutt room is a service for connecting scuttlebutt users.
+
+It includes a web interface for managing who is in the room, creating invites, and creating a code of conduct for the room.
+
+For a comprehensive introduction to rooms 2.0, watch [this video](https://www.youtube.com/watch?v=W5p0y_MWwDE).
 
 ### Features
 
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco ;
-- Laboris nisi ut aliquip ex ea commodo consequat ;
-- Duis aute irure dolor in reprehenderit in voluptate ;
-- Velit esse cillum dolore eu fugiat nulla pariatur ;
-- Excepteur sint occaecat cupidatat non proident, sunt in culpa."
+- Rooms v1 (tunnel.connect, tunnel.endpoints, etc.)
+- User management (allow- & denylisting + moderator & administrator roles), all administered via the web dashboard
+- Multiple privacy modes
+- Sign-in with SSB
+- HTTP Invites
+- Alias management
 
-
-**Version incluse :** 1.0~ynh1
+**Version incluse :** 2.0.6~ynh1
 
 **Démo :** https://hermies.club/
 
 ## Captures d'écran
 
+![](./doc/screenshots/ssbroom-screenshot.png)
 ![](./doc/screenshots/example.jpg)
 
 ## Avertissements / informations importantes
 
-* Any known limitations, constrains or stuff not working, such as (but not limited to):
-    * requiring a full dedicated domain ?
-    * architectures not supported ?
-    * not-working single-sign on or LDAP integration ?
-    * the app requires an important amount of RAM / disk / .. to install or to work properly
-    * etc...
-
-* Other infos that people should be aware of, such as:
-    * any specific step to perform after installing (such as manually finishing the install, specific admin credentials, ...)
-    * how to configure / administrate the application if it ain't obvious
-    * upgrade process / specificities / things to be aware of ?
-    * security considerations ?
-
+* Any known limitations, constraints or stuff not working:
+    * requires a full dedicated domain and does not support sub-paths
+    * currently ony supported on amd64 architecture (until more binaries are built upstream)
+    * ssb rooms work best when the app is in public mode. ssb-room has its own user and authentication system, and doesn't need yunohost SSO
 ## Documentations et ressources
 
 * Site officiel de l'app : https://github.com/ssb-ngi-pointer/go-ssb-room
