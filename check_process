@@ -6,6 +6,7 @@
 		language="fr"
 		is_public=1
 		password="1Strong-Password"
+		ssb_admin_id="@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
 		port="666"
 	; Checks
 		pkg_linter=1
