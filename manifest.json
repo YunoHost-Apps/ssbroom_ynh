@@ -5,7 +5,7 @@
     "description": {
         "en": "Secure Scuttlebutt room server implemented in Go"
     },
-    "version": "2.0.6~ynh1",
+    "version": "2.0.6~ynh2",
     "url": "https://github.com/ssb-ngi-pointer/go-ssb-room",
     "upstream": {
         "license": "free",
