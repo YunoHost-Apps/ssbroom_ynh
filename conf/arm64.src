@@ -1,0 +1,7 @@
+SOURCE_URL=https://files.commoninternet.net/go-ssb-room_2.0.6_Linux_aarch64.tar.gz
+SOURCE_SUM=39dee2ccaa3cc3cfb696dd86e39ae2cfae4565c9862935bd7a815869089a0bd2
+SOURCE_SUM_PRG=sha256sum
+SOURCE_FORMAT=tar.gz
+SOURCE_IN_SUBDIR=true
+SOURCE_FILENAME=
+SOURCE_EXTRACT=true

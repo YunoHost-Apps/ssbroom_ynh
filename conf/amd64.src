@@ -1,5 +1,5 @@
-SOURCE_URL=https://files.commoninternet.net/go-ssb-room_2.0.6_Linux_x86_64.tar.gz
-SOURCE_SUM=7823838a42daac48c39f13563552b84920d66e782acf239d1da5fbd3b475c5bf
+SOURCE_URL=https://files.commoninternet.net/go-ssb-room_2.0.6_Linux_amd64.tar.gz
+SOURCE_SUM=b03a3b9c440f0946e403618f5e9c2b65cf4fe3a31a282f877d5cf6dff2f18043
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
