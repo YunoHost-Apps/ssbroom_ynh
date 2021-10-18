@@ -55,7 +55,7 @@ def publish(architecture):
         subprocess.check_call(["cp", f_path, output_path])
     # create a tar
     tar_path = output_folder_path + ".tar.gz"
-    subprocess.check_call(["tar", "-czvf", tar_path, output_folder_path])
+    subprocess.check_call(["tar", "-czvf", tar_path, "-C", output_folder_path, "."])
 
 
 if __name__ == '__main__':
