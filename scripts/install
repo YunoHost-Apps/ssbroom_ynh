@@ -147,6 +147,15 @@ ynh_script_progression --message="Configuring a systemd service..."  --weight=1
 # Create a dedicated systemd config
 ynh_add_systemd_config
 
+# for yunohost version < 4.2, this is a workaround to replace string variables
+ynh_script_progression --message="String replacing systemd service with $datadir"  --weight=1
+systemd_file="/etc/systemd/system/$app.service"
+ynh_replace_string --match_string=__DATADIR__ --replace_string=$datadir --target_file=$systemd_file
+ynh_replace_string --match_string=__PORT__ --replace_string=$port --target_file=$systemd_file
+ynh_replace_string --match_string=__DOMAIN__ --replace_string=$domain --target_file=$systemd_file
+ynh_replace_string --match_string=__SSBPORT__ --replace_string=$ssbport --target_file=$systemd_file
+systemctl daemon-reload
+
 #=================================================
 # GENERIC FINALIZATION
 #=================================================

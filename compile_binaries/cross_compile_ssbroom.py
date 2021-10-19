@@ -3,6 +3,7 @@ script to cross-compile go-ssb-room for arm64 and other architectures
 
 before running, run:
 - sudo apt install gcc-aarch64-linux-gnu
+- sudo apt install gcc-arm-linux-gnueabi
 
 """
 import subprocess
@@ -34,6 +35,18 @@ def crosscompile_go_ssb_room():
                            "GOARCH=arm64", "go", "build", "./cmd/insert-user"], cwd=WORKING_DIR)
     publish(architecture="aarch64")
 
+def crosscompile_go_ssb_room_for_arm7():
+    subprocess.check_call(["git", "pull"], cwd=WORKING_DIR)
+    print("[CROSS-COMPILING for arm7 go-ssb-room/server]")
+    subprocess.check_call(["env", "CGO_ENABLED=1", "CC=arm-linux-gnueabi-gcc",
+                           "GOOS=linux",
+                           "GOARCH=arm", "GOARM=7", "go", "build", "./cmd/server"], cwd=WORKING_DIR)
+    print("[CROSS-COMPILING for arm7 go-ssb-room/insert-user]")
+    subprocess.check_call(["env", "CGO_ENABLED=1", "CC=arm-linux-gnueabi-gcc",
+                           "GOOS=linux",
+                           "GOARCH=arm", "GOARM=7", "go", "build", "./cmd/insert-user"], cwd=WORKING_DIR)
+    publish(architecture="arm7")
+
 def compile_go_ssb_room():
     subprocess.check_call(["git", "pull"], cwd=WORKING_DIR)
     print("[COMPILING go-ssb-room/server for amd64]")
@@ -60,5 +73,6 @@ def publish(architecture):
 
 if __name__ == '__main__':
     pull_repo()
-    crosscompile_go_ssb_room()
-    compile_go_ssb_room()
+    # crosscompile_go_ssb_room()
+    crosscompile_go_ssb_room_for_arm7()
+    # compile_go_ssb_room()
