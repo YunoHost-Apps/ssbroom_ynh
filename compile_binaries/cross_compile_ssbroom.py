@@ -23,7 +23,7 @@ def pull_repo():
         subprocess.check_call(["git", "pull"], cwd=WORKING_DIR)
 
 
-def crosscompile_go_ssb_room():
+def crosscompile_go_ssb_room_for_arm64():
     subprocess.check_call(["git", "pull"], cwd=WORKING_DIR)
     print("[CROSS-COMPILING go-ssb-room/server]")
     subprocess.check_call(["env", "CGO_ENABLED=1", "CC=aarch64-linux-gnu-gcc",
@@ -34,6 +34,7 @@ def crosscompile_go_ssb_room():
                            "CC_FOR_TARGET=gcc-aarch64-linux-gnu", "GOOS=linux",
                            "GOARCH=arm64", "go", "build", "./cmd/insert-user"], cwd=WORKING_DIR)
     publish(architecture="aarch64")
+
 
 def crosscompile_go_ssb_room_for_arm7():
     subprocess.check_call(["git", "pull"], cwd=WORKING_DIR)
@@ -46,6 +47,7 @@ def crosscompile_go_ssb_room_for_arm7():
                            "GOOS=linux",
                            "GOARCH=arm", "GOARM=7", "go", "build", "./cmd/insert-user"], cwd=WORKING_DIR)
     publish(architecture="arm7")
+
 
 def compile_go_ssb_room():
     subprocess.check_call(["git", "pull"], cwd=WORKING_DIR)
@@ -73,6 +75,6 @@ def publish(architecture):
 
 if __name__ == '__main__':
     pull_repo()
-    # crosscompile_go_ssb_room()
+    crosscompile_go_ssb_room_for_arm64()
     crosscompile_go_ssb_room_for_arm7()
-    # compile_go_ssb_room()
+    compile_go_ssb_room()
