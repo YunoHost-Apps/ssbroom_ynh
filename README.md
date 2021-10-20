@@ -30,7 +30,7 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 - HTTP Invites
 - Alias management
 
-**Shipped version:** 2.0.6~ynh2
+**Shipped version:** 2.0.6~ynh3
 
 **Demo:** https://hermies.club/
 
@@ -41,7 +41,7 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 ## Disclaimers / important information
 
  * requires a full dedicated domain and does not support sub-paths
- * currently ony supported on amd64 architecture (until more binaries are built upstream)
+ * currently ony supports the following architectures: amd64, arm64, arm7
  * ssb rooms work best when the app is in public mode. ssb-room has its own user and authentication system, and doesn't need yunohost SSO
 ## Documentation and resources
 
