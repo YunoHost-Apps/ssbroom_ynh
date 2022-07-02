@@ -52,14 +52,6 @@ ynh_script_progression --message="Removing logrotate configuration..."  --weight
 ynh_remove_logrotate
 
 #=================================================
-# REMOVE DEPENDENCIES
-#=================================================
-ynh_script_progression --message="Removing dependencies..."  --weight=1
-
-# Remove metapackage and its dependencies
-ynh_remove_app_dependencies
-
-#=================================================
 # REMOVE APP MAIN DIR
 #=================================================
 ynh_script_progression --message="Removing app main directory..."  --weight=1
@@ -70,10 +62,13 @@ ynh_secure_remove --file="$final_path"
 #=================================================
 # REMOVE DATA DIR
 #=================================================
-ynh_script_progression --message="Removing data directory..."  --weight=1
 
-# Remove the data directory securely
-ynh_secure_remove --file="$datadir"
+# Remove the data directory if --purge option is used
+if [ "${YNH_APP_PURGE:-0}" -eq 1 ]
+then
+	ynh_script_progression --message="Removing app data directory..."
+	ynh_secure_remove --file="$datadir"
+fi
 
 #=================================================
 # REMOVE NGINX CONFIGURATION
@@ -84,14 +79,16 @@ ynh_script_progression --message="Removing NGINX web server configuration..."  -
 ynh_remove_nginx_config
 
 #=================================================
+# REMOVE DEPENDENCIES
+#=================================================
+ynh_script_progression --message="Removing dependencies..."  --weight=1
+
+# Remove metapackage and its dependencies
+ynh_remove_app_dependencies
+
+#=================================================
 # CLOSE A PORT
 #=================================================
-
-if yunohost firewall list | grep -q "\- $port$"
-then
-	ynh_script_progression --message="Closing port $port..."  --weight=1
-	ynh_exec_warn_less yunohost firewall disallow TCP $port
-fi
 
 if yunohost firewall list | grep -q "\- $ssbport$"
 then

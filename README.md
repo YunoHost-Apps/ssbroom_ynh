@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # Scuttlebutt Room for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/ssbroom.svg)](https://dash.yunohost.org/appci/app/ssbroom) ![](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/ssbroom.svg)](https://dash.yunohost.org/appci/app/ssbroom) ![Working status](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)  
 [![Install Scuttlebutt Room with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=ssbroom)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -30,37 +30,38 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 - HTTP Invites
 - Alias management
 
-**Shipped version:** 2.0.6~ynh1
+**Shipped version:** 2.0.6~ynh4
 
 **Demo:** https://hermies.club/
 
 ## Screenshots
 
-![](./doc/screenshots/ssbroom-screenshot.png)
+![Screenshot of Scuttlebutt Room](./doc/screenshots/ssbroom-screenshot.png)
 
 ## Disclaimers / important information
 
  * requires a full dedicated domain and does not support sub-paths
- * currently ony supported on amd64 architecture (until more binaries are built upstream)
+ * currently ony supports the following architectures: amd64, arm64, arm7
  * ssb rooms work best when the app is in public mode. ssb-room has its own user and authentication system, and doesn't need yunohost SSO
 ## Documentation and resources
 
-* Official app website: https://github.com/ssb-ngi-pointer/go-ssb-room
-* Official user documentation: https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md
-* Official admin documentation: https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md
-* Upstream app code repository: https://github.com/ssb-ngi-pointer/go-ssb-room
-* YunoHost documentation for this app: https://yunohost.org/app_ssbroom
-* Report a bug: https://github.com/YunoHost-Apps/ssbroom_ynh/issues
+* Official app website: <https://github.com/ssb-ngi-pointer/go-ssb-room>
+* Official user documentation: <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
+* Official admin documentation: <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
+* Upstream app code repository: <https://github.com/ssb-ngi-pointer/go-ssb-room>
+* YunoHost documentation for this app: <https://yunohost.org/app_ssbroom>
+* Report a bug: <https://github.com/YunoHost-Apps/ssbroom_ynh/issues>
 
 ## Developer info
 
 Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/ssbroom_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
-```
+
+``` bash
 sudo yunohost app install https://github.com/YunoHost-Apps/ssbroom_ynh/tree/testing --debug
 or
 sudo yunohost app upgrade ssbroom -u https://github.com/YunoHost-Apps/ssbroom_ynh/tree/testing --debug
 ```
 
-**More info regarding app packaging:** https://yunohost.org/packaging_apps
+**More info regarding app packaging:** <https://yunohost.org/packaging_apps>

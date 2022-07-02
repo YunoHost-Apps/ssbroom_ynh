@@ -14,8 +14,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 
 ynh_clean_setup () {
-	### Remove this function if there's nothing to clean before calling the remove script.
-	true
+	ynh_clean_check_starting
 }
 # Exit if an error occurs during the execution of the script
 ynh_abort_if_errors
@@ -27,11 +26,9 @@ ynh_abort_if_errors
 domain=$YNH_APP_ARG_DOMAIN
 path_url="/"
 is_public=$YNH_APP_ARG_IS_PUBLIC
-#ssb_admin_id=$YNH_APP_ARG_SSB_ADMIN_ID
-# workaround for CI test
-ssb_admin_id="@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
+ssb_admin_id=$YNH_APP_ARG_SSB_ADMIN_ID
 password=$YNH_APP_ARG_PASSWORD
-architecture=$(ynh_detect_arch)
+
 app=$YNH_APP_INSTANCE_NAME
 
 #=================================================
@@ -95,9 +92,8 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$final_path" --source_id="$architecture"
+ynh_setup_source --dest_dir="$final_path" --source_id="$YNH_ARCH"
 
-# permissions
 chmod 750 "$final_path"
 chmod -R o-rwx "$final_path"
 chown -R $app:www-data "$final_path"
@@ -107,7 +103,7 @@ chown -R $app:www-data "$final_path"
 #=================================================
 ynh_script_progression --message="Configuring NGINX web server..."  --weight=1
 
-# add nginx config
+# Create a dedicated NGINX config
 ynh_add_nginx_config
 
 #=================================================
@@ -120,7 +116,6 @@ ynh_app_setting_set --app=$app --key=datadir --value=$datadir
 
 mkdir -p $datadir
 
-# permissions
 chmod 750 "$datadir"
 chmod -R o-rwx "$datadir"
 chown -R $app:www-data "$datadir"
@@ -129,6 +124,7 @@ chown -R $app:www-data "$datadir"
 # CREATE FIRST ADMIN USER
 #=================================================
 ynh_script_progression --message="Creating first ssbroom admin user"  --weight=1
+
 ynh_exec_as $app /usr/bin/expect<<EOF
 set force_conservative 0  ;
 set timeout -1
@@ -172,17 +168,12 @@ yunohost service add $app --description="$description" --log="/var/log/$app/$app
 ynh_script_progression --message="Starting a systemd service..."  --weight=1
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log" --line_match="event=serving"
 
 #=================================================
 # SETUP SSOWAT
 #=================================================
 ynh_script_progression --message="Configuring permissions..."  --weight=1
-
-# for normal operation of the app, is_public should equal True,
-# and all visitors should be able to access the /admin section, with or without SSO
-# as go-ssb-room has its own authentication and user-system
-# which operates outside of yunohost SSO
 
 # Make app public if necessary
 if [ $is_public -eq 1 ]

@@ -37,6 +37,7 @@ ynh_script_progression --message="Backing up the app before changing its URL (ma
 # Backup the current version of the app
 ynh_backup_before_upgrade
 ynh_clean_setup () {
+	ynh_clean_check_starting
 	# Remove the new domain config file, the remove script won't do it as it doesn't know yet its location.
 	ynh_secure_remove --file="/etc/nginx/conf.d/$new_domain.d/$app.conf"
 
@@ -98,6 +99,9 @@ then
 	mv $nginx_conf_path /etc/nginx/conf.d/$new_domain.d/$app.conf
 	# Store file checksum for the new config file location
 	ynh_store_file_checksum --file="/etc/nginx/conf.d/$new_domain.d/$app.conf"
+	# replace domain in systemd service file
+	ynh_replace_string --match_string=$old_domain --replace_string=$new_domain --target_file=/etc/systemd/system/$app.service
+	systemctl daemon-reload
 fi
 
 #=================================================
@@ -107,7 +111,7 @@ fi
 #=================================================
 ynh_script_progression --message="Starting a systemd service..."  --weight=1
 
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log" --line_match="event=serving"
 
 #=================================================
 # RELOAD NGINX
