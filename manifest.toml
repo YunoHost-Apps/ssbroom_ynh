@@ -2,7 +2,8 @@ packaging_format = 2
 
 id = "ssbroom"
 name = "Scuttlebutt Room"
-description.en = "Secure Scuttlebutt room server implemented in Go"
+description.en = "Secure Scuttlebutt room server"
+description.fr = "Serveur de salon Scuttlebutt sécurisé"
 
 version = "2.0.6~ynh5"
 
@@ -10,7 +11,6 @@ maintainers = ["Max Fowler"]
 
 [upstream]
 license = "free"
-website = "https://github.com/ssb-ngi-pointer/go-ssb-room"
 demo = "https://hermies.club/"
 admindoc = "https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md"
 userdoc = "https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md"
@@ -32,18 +32,19 @@ ram.runtime = "50M"
     full_domain = true
 
     [install.init_main_permission]
-    help.en = "If false, ssbroom will only be usable by yunohost users."
     type = "group"
     default = "visitors"
 
     [install.ssb_admin_id]
     ask.en = "SSB ID of first admin of the room"
+    ask.fr = "ID SSB du premier administrateur du salon"
     help.en = "This ssb_id is used as the username for the first admin of the room. Create an ssb account or use your already existing ssb account, and use your ssb public key as the room admin id."
     type = "string"
     example = "@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
 
     [install.password]
     help.en = "Use this password to log into the admin interface for the ssb room."
+    help.fr = "Utilisez ce mot de passe pour vous connecter à l'interface d'administration de la salle ssb."
     type = "password"
 
 [resources]
