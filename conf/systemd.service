@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/server -repo __DATA_DIR__/ -lishttp localhost:__PORT__ -https-domain __DOMAIN__ -lismux :__SSBPORT__ -aliases-as-subdomains false
+ExecStart=__INSTALL_DIR__/server -repo __DATA_DIR__/ -lishttp localhost:__PORT__ -https-domain __DOMAIN__ -lismux :__PORT_SSB__ -aliases-as-subdomains false
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 
