@@ -5,7 +5,8 @@ It shall NOT be edited by hand.
 
 # Scuttlebutt Room for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/ssbroom.svg)](https://dash.yunohost.org/appci/app/ssbroom) ![Working status](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/ssbroom.svg)](https://dash.yunohost.org/appci/app/ssbroom) ![Working status](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
+
 [![Install Scuttlebutt Room with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=ssbroom)
 
 *[Lire ce readme en français.](./README_fr.md)*
