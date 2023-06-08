@@ -5,7 +5,7 @@
 #=================================================
 
 # dependencies used by the app
-pkg_dependencies="expect"
+#REMOVEME? pkg_dependencies="expect"
 
 description="Secure Scuttlebutt room server implemented in Go"
 
