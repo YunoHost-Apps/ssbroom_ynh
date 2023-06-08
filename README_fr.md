@@ -46,7 +46,6 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
  * ssb rooms work best when the app is in public mode. ssb-room has its own user and authentication system, and doesn't need yunohost SSO
 ## Documentations et ressources
 
-* Site officiel de l’app : <https://github.com/ssb-ngi-pointer/go-ssb-room>
 * Documentation officielle utilisateur : <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
 * Documentation officielle de l’admin : <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
 * Dépôt de code officiel de l’app : <https://github.com/ssb-ngi-pointer/go-ssb-room>
