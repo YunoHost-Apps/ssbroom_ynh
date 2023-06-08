@@ -32,6 +32,8 @@ ram.runtime = "50M"
     full_domain = true
 
     [install.init_main_permission]
+    help.en = "ssb rooms work best when the app is in visitors mode."
+    help.fr = "Les salons ssb fonctionnent mieux lorsque l'application est en mode visiteurs."
     type = "group"
     default = "visitors"
 
