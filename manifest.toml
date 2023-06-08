@@ -10,7 +10,7 @@ version = "2.0.6~ynh5"
 maintainers = ["Max Fowler"]
 
 [upstream]
-license = "free"
+license = "MIT"
 demo = "https://hermies.club/"
 admindoc = "https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md"
 userdoc = "https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md"
