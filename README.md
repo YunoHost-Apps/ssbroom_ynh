@@ -16,10 +16,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-A Scuttlebutt room is a service for connecting scuttlebutt users.
-
-It includes a web interface for managing who is in the room, creating invites, and creating a code of conduct for the room.
-
+A Scuttlebutt room is a service for connecting scuttlebutt users. It includes a web interface for managing who is in the room, creating invites, and creating a code of conduct for the room.
 For a comprehensive introduction to rooms 2.0, watch [this video](https://www.youtube.com/watch?v=W5p0y_MWwDE).
 
 ### Features
@@ -39,11 +36,6 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 
 ![Screenshot of Scuttlebutt Room](./doc/screenshots/ssbroom-screenshot.png)
 
-## Disclaimers / important information
-
- * requires a full dedicated domain and does not support sub-paths
- * currently ony supports the following architectures: amd64, arm64, arm7
- * ssb rooms work best when the app is in public mode. ssb-room has its own user and authentication system, and doesn't need yunohost SSO
 ## Documentation and resources
 
 * Official user documentation: <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
