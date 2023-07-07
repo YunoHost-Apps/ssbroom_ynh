@@ -29,7 +29,7 @@ ynh_script_progression --message="Building app..." --weight=1
 ynh_exec_warn_less ynh_install_go --go_version=$go_version
 ynh_use_go
 
-pushd $install_dir
+pushd $install_dir/cmd/server
 	ynh_exec_warn_less ynh_exec_as $app CGO_ENABLED=0 $ynh_go build -o $install_dir/
 popd
 
