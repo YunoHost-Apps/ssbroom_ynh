@@ -29,6 +29,18 @@ ynh_script_progression --message="Configuring NGINX web server..."  --weight=1
 ynh_add_nginx_config
 
 #=================================================
+# BUILD APP
+#=================================================
+ynh_script_progression --message="Building app..." --weight=1
+
+ynh_exec_warn_less ynh_install_go --go_version=$go_version
+ynh_use_go
+
+pushd $install_dir
+	ynh_exec_warn_less ynh_exec_as $app CGO_ENABLED=0 $ynh_go build -o $install_dir/
+popd
+
+#=================================================
 # CREATE FIRST ADMIN USER
 #=================================================
 ynh_script_progression --message="Creating first ssbroom admin user"  --weight=1
