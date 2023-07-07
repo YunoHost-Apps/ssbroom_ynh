@@ -40,7 +40,7 @@ ram.runtime = "50M"
     [install.ssb_admin_id]
     ask.en = "SSB ID of first admin of the room"
     ask.fr = "ID SSB du premier administrateur du salon"
-    help.en = "This ssb_id is used as the username for the first admin of the room. Create an ssb account or use your already existing ssb account, and use your ssb public key as the room admin id."
+    help.en = "This ssb_id is used as the username for the first admin of the room. Create an SSB account or use your already existing ssb account, and use your ssb public key as the room admin id."
     type = "string"
     example = "@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
 
@@ -51,12 +51,9 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        armhf.url = "https://files.commoninternet.net/go-ssb-room_2.0.6_Linux_arm7.tar.gz"
-        armhf.sha256 = "8894b7b21031976e1d79265fefdcef4edb6fde38f34231e8aea4cebcc85a4f88"
-        arm64.url = "https://files.commoninternet.net/go-ssb-room_2.0.6_Linux_aarch64.tar.gz"
-        arm64.sha256 = "8f9d357d54fd8bdc1c2e906919ddefef21ae51b13e5ae1939424c6c1e94c9d23"
-        amd64.url = "https://files.commoninternet.net/go-ssb-room_2.0.6_Linux_amd64.tar.gz"
-        amd64.sha256 = "1a1c4368df219e907e15996bd6d62b653f54017993b1cc607ab09a9a01fb8558"
+        url = "https://github.com/ssbc/go-ssb-room/archive/refs/tags/v2.0.6.tar.gz"
+        sha256 = "2ee764972ace3560b341aa3ed4c4e62e9a332426ba2b607ecf3e5e4578ac36c4"
+        autoupdate.strategy = "latest_github_tag"
 
     [resources.ports]
     main.default = 8899
