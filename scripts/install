@@ -7,6 +7,7 @@
 #=================================================
 
 source _common.sh
+source ynh_install_go
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -31,6 +32,8 @@ ynh_use_go
 pushd $install_dir
 	ynh_exec_warn_less ynh_exec_as $app CGO_ENABLED=0 $ynh_go build -o $install_dir/
 popd
+
+ynh_remove_go
 
 chmod +x "$install_dir/server"
  
