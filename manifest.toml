@@ -17,7 +17,7 @@ userdoc = "https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md"
 code = "https://github.com/ssb-ngi-pointer/go-ssb-room"
 
 [integration]
-yunohost = ">= 11.1.19"
+yunohost = ">= 11.1.21"
 architectures = ["amd64", "arm64", "armhf"]
 multi_instance = true
 ldap = false
