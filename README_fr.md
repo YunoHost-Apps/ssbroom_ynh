@@ -37,7 +37,7 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 
 ## Captures d’écran
 
-![Capture d’écran de Scuttlebutt Room](./doc/screenshots/ssbroom-screenshot.png)
+![Capture d’écran de Scuttlebutt Room](./doc/screenshots/screenshot.png)
 
 ## Documentations et ressources
 
