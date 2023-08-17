@@ -3,13 +3,13 @@
     "id": "ssbroom",
     "packaging_format": 1,
     "description": {
-        "en": "Secure Scuttlebutt room server implemented in Go"
+        "en": "Secure Scuttlebutt room server",
+        "fr": "Serveur de salon Scuttlebutt sécurisé"
     },
-    "version": "2.0.6~ynh5",
+    "version": "2.0.6~ynh6",
     "url": "https://github.com/ssb-ngi-pointer/go-ssb-room",
     "upstream": {
-        "license": "free",
-        "website": "https://github.com/ssb-ngi-pointer/go-ssb-room",
+        "license": "AGPL-3.0",
         "demo": "https://hermies.club/",
         "admindoc": "https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md",
         "userdoc": "https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md",
@@ -21,7 +21,7 @@
         "email": "max@mfowler.info"
     },
     "requirements": {
-        "yunohost": ">= 4.3.0"
+        "yunohost": ">= 11.2"
     },
     "multi_instance": true,
     "services": [
@@ -38,17 +38,20 @@
                 "type": "boolean",
                 "default": true,
                 "help": {
-                    "en": "If false, ssbroom will only be usable by yunohost users."
+                    "en": "If false, ssbroom will only be usable by YunoHost users.",
+                    "fr": "Si false, ssbroom ne sera utilisable que par les utilisateurs de YunoHost."
                 }
             },
             {
                 "name": "ssb_admin_id",
                 "type": "string",
                 "ask": {
-                    "en": "SSB ID of first admin of the room"
+                    "en": "SSB ID of first admin of the room",
+                    "fr": "ID SSB du premier administrateur de la salle"
                 },
                 "help": {
-                    "en": "This ssb_id is used as the username for the first admin of the room. Create an ssb account or use your already existing ssb account, and use your ssb public key as the room admin id."
+                    "en": "This ssb_id is used as the username for the first admin of the room. Create an SSB account or use your already existing SSB account, and use your SSB public key as the room admin ID.",
+                    "fr": "Ce ssb_id est utilisé comme nom d'utilisateur pour le premier administrateur de la salle. Créez un compte SSB ou utilisez votre compte SSB déjà existant et utilisez votre clé publique SSB comme ID de salle."
                 },
                 "example": "@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
             },
@@ -56,7 +59,8 @@
                 "name": "password",
                 "type": "password",
                 "help": {
-                    "en": "Use this password to log into the admin interface for the ssb room."
+                    "en": "Use this password to log into the admin interface for the SSB room.",
+                    "fr": "Utilisez ce mot de passe pour vous connecter à l'interface d'administration de la salle SSB."
                 }
             }
         ]
