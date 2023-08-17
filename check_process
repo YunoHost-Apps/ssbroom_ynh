@@ -13,7 +13,7 @@
 		setup_public=1
 		upgrade=1
 		# 2.0.6~ynh3
-		upgrade=1	from_commit=c759c5f400660031676a0f92d5c5ffcc68bd6da9
+		#upgrade=1	from_commit=c759c5f400660031676a0f92d5c5ffcc68bd6da9
 		backup_restore=1
 		multi_instance=1
 		port_already_use=0
