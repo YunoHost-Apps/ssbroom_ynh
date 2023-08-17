@@ -31,7 +31,7 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 - HTTP Invites
 - Alias management
 
-**Shipped version:** 2.0.6~ynh5
+**Shipped version:** 2.0.6~ynh6
 
 **Demo:** https://hermies.club/
 
@@ -46,7 +46,6 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
  * ssb rooms work best when the app is in public mode. ssb-room has its own user and authentication system, and doesn't need yunohost SSO
 ## Documentation and resources
 
-* Official app website: <https://github.com/ssb-ngi-pointer/go-ssb-room>
 * Official user documentation: <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
 * Official admin documentation: <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
 * Upstream app code repository: <https://github.com/ssb-ngi-pointer/go-ssb-room>
