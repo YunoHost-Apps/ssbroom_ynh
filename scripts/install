@@ -160,7 +160,7 @@ ynh_use_logrotate
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..."  --weight=1
 
-yunohost service add $app --description="$description" --log="/var/log/$app/$app.log" --needs_exposed_ports $ssbport
+yunohost service add $app --description="Secure Scuttlebutt room server" --log="/var/log/$app/$app.log" --needs_exposed_ports $ssbport
 
 #=================================================
 # START SYSTEMD SERVICE
@@ -182,7 +182,6 @@ then
 	# The "main" permission is automatically created before the install script.
 	ynh_permission_update --permission="main" --add="visitors"
 fi
-
 
 #=================================================
 # RELOAD NGINX
