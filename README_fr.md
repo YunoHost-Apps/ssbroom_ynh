@@ -5,15 +5,16 @@ It shall NOT be edited by hand.
 
 # Scuttlebutt Room pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/ssbroom.svg)](https://dash.yunohost.org/appci/app/ssbroom) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/ssbroom.svg)](https://dash.yunohost.org/appci/app/ssbroom) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
+
 [![Installer Scuttlebutt Room avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=ssbroom)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer Scuttlebutt Room rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer Scuttlebutt Room rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 A Scuttlebutt room is a service for connecting scuttlebutt users.
 
@@ -34,9 +35,9 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 
 **Démo :** https://hermies.club/
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de Scuttlebutt Room](./doc/screenshots/ssbroom-screenshot.png)
+![Capture d’écran de Scuttlebutt Room](./doc/screenshots/ssbroom-screenshot.png)
 
 ## Avertissements / informations importantes
 
@@ -45,10 +46,10 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
  * ssb rooms work best when the app is in public mode. ssb-room has its own user and authentication system, and doesn't need yunohost SSO
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://github.com/ssb-ngi-pointer/go-ssb-room>
+* Site officiel de l’app : <https://github.com/ssb-ngi-pointer/go-ssb-room>
 * Documentation officielle utilisateur : <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
-* Documentation officielle de l'admin : <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
-* Dépôt de code officiel de l'app : <https://github.com/ssb-ngi-pointer/go-ssb-room>
+* Documentation officielle de l’admin : <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
+* Dépôt de code officiel de l’app : <https://github.com/ssb-ngi-pointer/go-ssb-room>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_ssbroom>
 * Signaler un bug : <https://github.com/YunoHost-Apps/ssbroom_ynh/issues>
 
@@ -64,4 +65,4 @@ ou
 sudo yunohost app upgrade ssbroom -u https://github.com/YunoHost-Apps/ssbroom_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
