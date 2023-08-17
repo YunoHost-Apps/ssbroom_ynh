@@ -1,4 +1,4 @@
-SOURCE_URL=https://files.commoninternet.net/go-ssb-room_2.0.6_Linux_arm7.tar.gz
+SOURCE_URL=https://github.com/YunoHost-Apps/ssbroom_ynh/releases/download/v2.0.6/go-ssb-room_2.0.6_Linux_arm7.tar.gz
 SOURCE_SUM=8894b7b21031976e1d79265fefdcef4edb6fde38f34231e8aea4cebcc85a4f88
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
