@@ -49,7 +49,7 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 * Documentation officielle utilisateur : <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
 * Documentation officielle de l’admin : <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>
 * Dépôt de code officiel de l’app : <https://github.com/ssb-ngi-pointer/go-ssb-room>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_ssbroom>
+* YunoHost Store: <https://apps.yunohost.org/app/ssbroom>
 * Signaler un bug : <https://github.com/YunoHost-Apps/ssbroom_ynh/issues>
 
 ## Informations pour les développeurs
