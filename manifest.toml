@@ -7,7 +7,7 @@ name = "Scuttlebutt Room"
 description.en = "Secure Scuttlebutt room server"
 description.fr = "Serveur de salon Scuttlebutt sécurisé"
 
-version = "2.0.6~ynh6"
+version = "2.0.6~ynh7"
 
 maintainers = ["Max Fowler"]
 
