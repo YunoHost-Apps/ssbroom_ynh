@@ -4,6 +4,9 @@ test_format = 1.0
 
 [default]
 
+    args.ssb_admin_id = "@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
+    args.password = "1Strong-Password"
+
     # -------------------------------
     # Commits to test upgrade from
     # -------------------------------
