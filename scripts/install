@@ -47,7 +47,7 @@ ynh_add_nginx_config
 
 # Create a dedicated systemd config
 ynh_add_systemd_config
-yunohost service add $app --description="Secure Scuttlebutt room server" --log="/var/log/$app/$app.log" --needs_exposed_ports $ssbport
+yunohost service add $app --description="Secure Scuttlebutt room server" --log="/var/log/$app/$app.log" --needs_exposed_ports $port_ssb
 
 # Use logrotate to manage application logfile(s)
 ynh_use_logrotate
