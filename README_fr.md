@@ -31,7 +31,7 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 - HTTP Invites
 - Alias management
 
-**Version incluse :** 2.0.6~ynh6
+**Version incluse :** 2.0.6~ynh7
 
 **Démo :** https://hermies.club/
 
@@ -39,11 +39,6 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 
 ![Capture d’écran de Scuttlebutt Room](./doc/screenshots/ssbroom-screenshot.png)
 
-## Avertissements / informations importantes
-
- * requires a full dedicated domain and does not support sub-paths
- * currently ony supports the following architectures: amd64, arm64, arm7
- * ssb rooms work best when the app is in public mode. ssb-room has its own user and authentication system, and doesn't need yunohost SSO
 ## Documentations et ressources
 
 * Documentation officielle utilisateur : <https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md>

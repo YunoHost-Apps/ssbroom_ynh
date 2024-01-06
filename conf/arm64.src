@@ -1,7 +1,0 @@
-SOURCE_URL=https://github.com/YunoHost-Apps/ssbroom_ynh/releases/download/v2.0.6/go-ssb-room_2.0.6_Linux_aarch64.tar.gz
-SOURCE_SUM=8f9d357d54fd8bdc1c2e906919ddefef21ae51b13e5ae1939424c6c1e94c9d23
-SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=tar.gz
-SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
-SOURCE_EXTRACT=true

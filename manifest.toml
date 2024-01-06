@@ -1,0 +1,82 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "ssbroom"
+name = "Scuttlebutt Room"
+description.en = "Secure Scuttlebutt room server"
+description.fr = "Serveur de salon Scuttlebutt sécurisé"
+
+version = "2.0.6~ynh7"
+
+maintainers = ["Max Fowler"]
+
+[upstream]
+license = "AGPL-3.0"
+demo = "https://hermies.club/"
+code = "https://github.com/ssb-ngi-pointer/go-ssb-room"
+admindoc = "https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md"
+userdoc = "https://github.com/ssb-ngi-pointer/go-ssb-room/blob/master/README.md"
+
+[integration]
+yunohost = ">= 11.2"
+architectures = ["amd64", "armhf", "arm64"]
+multi_instance = true
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "200M"
+ram.runtime = "100M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.init_main_permission]
+    help.en = "If false, ssbroom will only be usable by YunoHost users."
+    help.fr = "Si false, ssbroom ne sera utilisable que par les utilisateurs de YunoHost."
+    type = "group"
+    default = "visitors"
+
+    [install.ssb_admin_id]
+    ask.en = "SSB ID of first admin of the room"
+    ask.fr = "ID SSB du premier administrateur de la salle"
+    help.en = "This ssb_id is used as the username for the first admin of the room. Create an SSB account or use your already existing SSB account, and use your SSB public key as the room admin ID."
+    help.fr = "Ce ssb_id est utilisé comme nom d'utilisateur pour le premier administrateur de la salle. Créez un compte SSB ou utilisez votre compte SSB déjà existant et utilisez votre clé publique SSB comme ID de salle."
+    type = "string"
+    example = "@5Pt3dKy2HTJ0mWuS78oIiklIX0gBz6BTfEnXsbvke9c=.ed25519"
+
+    [install.password]
+    help.en = "Use this password to log into the admin interface for the SSB room."
+    help.fr = "Utilisez ce mot de passe pour vous connecter à l'interface d'administration de la salle SSB."
+    type = "password"
+
+[resources]
+    [resources.sources.main]
+    amd64.url = "https://github.com/YunoHost-Apps/ssbroom_ynh/releases/download/v2.0.6/go-ssb-room_2.0.6_Linux_amd64.tar.gz"
+    amd64.sha256 = "1a1c4368df219e907e15996bd6d62b653f54017993b1cc607ab09a9a01fb8558"
+    armhf.url = "https://github.com/YunoHost-Apps/ssbroom_ynh/releases/download/v2.0.6/go-ssb-room_2.0.6_Linux_arm7.tar.gz"
+    armhf.sha256 = "8894b7b21031976e1d79265fefdcef4edb6fde38f34231e8aea4cebcc85a4f88"
+    arm64.url = "https://github.com/YunoHost-Apps/ssbroom_ynh/releases/download/v2.0.6/go-ssb-room_2.0.6_Linux_aarch64.tar.gz"
+    arm64.sha256 = "8f9d357d54fd8bdc1c2e906919ddefef21ae51b13e5ae1939424c6c1e94c9d23"
+
+    autoupdate.upstream = "https://github.com/ssbc/go-ssb-room"
+    autoupdate.strategy = "latest_github_release"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+    group = "www-data:rwx"
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
+    main.default = 8899
+    ssb.default = 8008
+    ssb.exposed = true
+
+    [resources.apt]
+    packages = ["expect"]
