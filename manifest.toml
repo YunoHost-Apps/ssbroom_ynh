@@ -60,11 +60,12 @@ ram.runtime = "100M"
     arm64.url = "https://github.com/YunoHost-Apps/ssbroom_ynh/releases/download/v2.0.6/go-ssb-room_2.0.6_Linux_aarch64.tar.gz"
     arm64.sha256 = "8f9d357d54fd8bdc1c2e906919ddefef21ae51b13e5ae1939424c6c1e94c9d23"
 
+    # Autoupdate will need manual work, be careful!
     autoupdate.upstream = "https://github.com/ssbc/go-ssb-room"
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = "^go-ssb-room_.*_Linux_x86_64.tar.gz$"
-    autoupdate.asset.armhf = "^go-ssb-room_.*_Linux_arm7.tar.gz$"
-    autoupdate.asset.arm64 = "^go-ssb-room_.*_Linux_aarch64.tar.gz$"
+    autoupdate.asset.armhf = "^go-ssb-room_.*_Linux_x86_64.tar.gz$"
+    autoupdate.asset.arm64 = "^go-ssb-room_.*_Linux_x86_64.tar.gz$"
 
     [resources.system_user]
 
