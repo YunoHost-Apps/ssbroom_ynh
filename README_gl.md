@@ -31,7 +31,7 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 - HTTP Invites
 - Alias management
 
-**Versión proporcionada:** 2.0.6~ynh7
+**Versión proporcionada:** 2.0.6~ynh8
 
 **Demo:** <https://hermies.club/>
 
