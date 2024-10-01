@@ -5,7 +5,7 @@ Il NE doit PAS être modifié à la main.
 
 # Scuttlebutt Room pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/ssbroom.svg)](https://dash.yunohost.org/appci/app/ssbroom) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
+[![Niveau d’intégration](https://dash.yunohost.org/integration/ssbroom.svg)](https://ci-apps.yunohost.org/ci/apps/ssbroom/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
 
 [![Installer Scuttlebutt Room avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=ssbroom)
 
