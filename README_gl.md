@@ -5,7 +5,7 @@ NON debe editarse manualmente.
 
 # Scuttlebutt Room para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/ssbroom.svg)](https://dash.yunohost.org/appci/app/ssbroom) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/ssbroom.svg)](https://ci-apps.yunohost.org/ci/apps/ssbroom/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
 
 [![Instalar Scuttlebutt Room con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=ssbroom)
 
@@ -31,7 +31,7 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 - HTTP Invites
 - Alias management
 
-**Versión proporcionada:** 2.0.6~ynh8
+**Versión proporcionada:** 2.0.6~ynh9
 
 **Demo:** <https://hermies.club/>
 

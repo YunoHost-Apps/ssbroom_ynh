@@ -5,7 +5,7 @@
 
 # YunoHost 上的 Scuttlebutt Room
 
-[![集成程度](https://dash.yunohost.org/integration/ssbroom.svg)](https://dash.yunohost.org/appci/app/ssbroom) ![工作状态](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/ssbroom.svg)](https://ci-apps.yunohost.org/ci/apps/ssbroom/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
 
 [![使用 YunoHost 安装 Scuttlebutt Room](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=ssbroom)
 
@@ -31,7 +31,7 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 - HTTP Invites
 - Alias management
 
-**分发版本：** 2.0.6~ynh8
+**分发版本：** 2.0.6~ynh9
 
 **演示：** <https://hermies.club/>
 

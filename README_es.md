@@ -5,7 +5,7 @@ No se debe editar a mano.
 
 # Scuttlebutt Room para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/ssbroom.svg)](https://dash.yunohost.org/appci/app/ssbroom) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/ssbroom.svg)](https://ci-apps.yunohost.org/ci/apps/ssbroom/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
 
 [![Instalar Scuttlebutt Room con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=ssbroom)
 
@@ -31,7 +31,7 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 - HTTP Invites
 - Alias management
 
-**Versión actual:** 2.0.6~ynh8
+**Versión actual:** 2.0.6~ynh9
 
 **Demo:** <https://hermies.club/>
 
@@ -49,7 +49,7 @@ For a comprehensive introduction to rooms 2.0, watch [this video](https://www.yo
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/ssbroom_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/ssbroom_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
