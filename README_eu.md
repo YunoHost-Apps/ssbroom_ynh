@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Scuttlebutt Room YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/ssbroom.svg)](https://dash.yunohost.org/appci/app/ssbroom) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/ssbroom.svg)](https://ci-apps.yunohost.org/ci/apps/ssbroom/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/ssbroom.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/ssbroom.maintain.svg)
 
 [![Instalatu Scuttlebutt Room YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=ssbroom)
 
