@@ -30,6 +30,7 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 ynh_config_add_nginx
 
 ynh_config_add_systemd
+
 yunohost service add $app --description="Secure Scuttlebutt room server" --log="/var/log/$app/$app.log" --needs_exposed_ports $port_ssb
 
 ynh_config_add_logrotate
